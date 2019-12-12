@@ -30,7 +30,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull NewsAdapter.ViewHolder holder, int position) {
         News news = newsList.get(position);
-        holder.binding.setNews(news);
+        holder.itemBinding.setNews(news);
 
     }
 
@@ -40,11 +40,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public NewsListItemBinding binding;
+        public NewsListItemBinding itemBinding;
 
         public ViewHolder(@NonNull NewsListItemBinding binding) {
             super(binding.getRoot());
-            this.binding = binding;
+            this.itemBinding = binding;
+
 
         }
     }
