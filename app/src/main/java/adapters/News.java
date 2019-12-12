@@ -4,6 +4,7 @@ public class News {
     private int image;
     private String title, category;
     private String date;
+    private String khalid;
 
     public News(int image, String title, String category, String date) {
         this.image = image;
