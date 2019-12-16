@@ -3,7 +3,7 @@
     <data class="NewsListItemBinding">
         <variable
             name="news"
-            type="adapters.News" />
+            type="com.project.semicolon.eduactive.adapters.News" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
