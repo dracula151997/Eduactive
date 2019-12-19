@@ -1,0 +1,740 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "e48cd2dd807b13422aba60dc56d78353",
+    "entities": [
+      {
+        "tableName": "courses",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`course_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `crs_name` TEXT, `crs_code` TEXT, `crs_hours` INTEGER NOT NULL, `crs_content` TEXT, `crs_group_link` TEXT, `crs_references` TEXT, `instructorId` INTEGER NOT NULL, `departmentId` INTEGER NOT NULL, FOREIGN KEY(`instructorId`) REFERENCES `instructors`(`inst_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT , FOREIGN KEY(`departmentId`) REFERENCES `department`(`dep_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "cid",
+            "columnName": "course_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseTitle",
+            "columnName": "crs_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "courseCode",
+            "columnName": "crs_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hours",
+            "columnName": "crs_hours",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseContent",
+            "columnName": "crs_content",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "courseGroupLink",
+            "columnName": "crs_group_link",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "references",
+            "columnName": "crs_references",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instructorId",
+            "columnName": "instructorId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "departmentId",
+            "columnName": "departmentId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "course_pk"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_courses_instructorId",
+            "unique": false,
+            "columnNames": [
+              "instructorId"
+            ],
+            "createSql": "CREATE  INDEX `index_courses_instructorId` ON `${TABLE_NAME}` (`instructorId`)"
+          },
+          {
+            "name": "index_courses_departmentId",
+            "unique": false,
+            "columnNames": [
+              "departmentId"
+            ],
+            "createSql": "CREATE  INDEX `index_courses_departmentId` ON `${TABLE_NAME}` (`departmentId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "instructors",
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "columns": [
+              "instructorId"
+            ],
+            "referencedColumns": [
+              "inst_pk"
+            ]
+          },
+          {
+            "table": "department",
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "columns": [
+              "departmentId"
+            ],
+            "referencedColumns": [
+              "dep_pk"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "department",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`dep_pk` INTEGER NOT NULL, `dep_name` TEXT, `dep_code` TEXT, `managerId` INTEGER NOT NULL, PRIMARY KEY(`dep_pk`), FOREIGN KEY(`managerId`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "did",
+            "columnName": "dep_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "departmentName",
+            "columnName": "dep_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "departmentCode",
+            "columnName": "dep_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "managerId",
+            "columnName": "managerId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "dep_pk"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_department_managerId",
+            "unique": false,
+            "columnNames": [
+              "managerId"
+            ],
+            "createSql": "CREATE  INDEX `index_department_managerId` ON `${TABLE_NAME}` (`managerId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "employees",
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "columns": [
+              "managerId"
+            ],
+            "referencedColumns": [
+              "emp_pk"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "employees",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`emp_pk` INTEGER NOT NULL, `emp_name` TEXT, `emp_birth_date` INTEGER, `emp_state` TEXT, `emp_city` TEXT, `emp_address` TEXT, `salary` TEXT, `emp_email` TEXT, `emp_image` BLOB, `emp_tel` TEXT, `emp_mob` TEXT, `departmentId` INTEGER NOT NULL, PRIMARY KEY(`emp_pk`), FOREIGN KEY(`departmentId`) REFERENCES `department`(`dep_pk`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "eid",
+            "columnName": "emp_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "employeeName",
+            "columnName": "emp_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "birthdate",
+            "columnName": "emp_birth_date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "state",
+            "columnName": "emp_state",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "emp_city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "emp_address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "salary",
+            "columnName": "salary",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "emp_email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "emp_image",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telephone",
+            "columnName": "emp_tel",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobile",
+            "columnName": "emp_mob",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "departmentId",
+            "columnName": "departmentId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "emp_pk"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_employees_departmentId",
+            "unique": false,
+            "columnNames": [
+              "departmentId"
+            ],
+            "createSql": "CREATE  INDEX `index_employees_departmentId` ON `${TABLE_NAME}` (`departmentId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "department",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "departmentId"
+            ],
+            "referencedColumns": [
+              "dep_pk"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "exams_bank",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`exam_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `exams_pdf` TEXT, `model_answer` TEXT, `has_model_answer` INTEGER NOT NULL, `exam_year` INTEGER, `instructor_name` TEXT, `exam_type` INTEGER NOT NULL, `level` INTEGER NOT NULL, `course_name` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "eid",
+            "columnName": "exam_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pdf",
+            "columnName": "exams_pdf",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "modelAnswer",
+            "columnName": "model_answer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hasModelAnswer",
+            "columnName": "has_model_answer",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "year",
+            "columnName": "exam_year",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instructorName",
+            "columnName": "instructor_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "exam_type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseName",
+            "columnName": "course_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "exam_pk"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "instructors",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`inst_pk` INTEGER NOT NULL, `inst_first_name` TEXT, `inst_last_name` TEXT, `inst_code` TEXT, `inst_job_title` TEXT, `inst_image` BLOB, `inst_mobile` TEXT, `inst_telephone` TEXT, `inst_user_name` TEXT, `inst_password` TEXT, `inst_state` TEXT, `inst_city` TEXT, `inst_address` TEXT, `inst_email` TEXT, `created_at` INTEGER, PRIMARY KEY(`inst_pk`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "inst_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "inst_first_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "inst_last_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "inst_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "jobTitle",
+            "columnName": "inst_job_title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "inst_image",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobile",
+            "columnName": "inst_mobile",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telephone",
+            "columnName": "inst_telephone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "username",
+            "columnName": "inst_user_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "inst_password",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "state",
+            "columnName": "inst_state",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "inst_city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "inst_address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "inst_email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "inst_pk"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "labs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`lab_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `labSupervisor` INTEGER NOT NULL, `lab_code` TEXT, `students_num` TEXT, FOREIGN KEY(`labSupervisor`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "lid",
+            "columnName": "lab_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "labSupervisor",
+            "columnName": "labSupervisor",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "lab_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "studentsNumber",
+            "columnName": "students_num",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "lab_pk"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_labs_labSupervisor",
+            "unique": false,
+            "columnNames": [
+              "labSupervisor"
+            ],
+            "createSql": "CREATE  INDEX `index_labs_labSupervisor` ON `${TABLE_NAME}` (`labSupervisor`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "employees",
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "columns": [
+              "labSupervisor"
+            ],
+            "referencedColumns": [
+              "emp_pk"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "articles",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`news_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `employeeId` INTEGER NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` TEXT, `views_counter` TEXT, FOREIGN KEY(`employeeId`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "news_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "employeeId",
+            "columnName": "employeeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "article_title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "article_desc",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "article_image",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "viewsCounter",
+            "columnName": "views_counter",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "news_pk"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_articles_employeeId",
+            "unique": false,
+            "columnNames": [
+              "employeeId"
+            ],
+            "createSql": "CREATE  INDEX `index_articles_employeeId` ON `${TABLE_NAME}` (`employeeId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "employees",
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "columns": [
+              "employeeId"
+            ],
+            "referencedColumns": [
+              "emp_pk"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "reports",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`report_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `studentId` INTEGER NOT NULL, `report_desc` TEXT, `report_title` TEXT, FOREIGN KEY(`studentId`) REFERENCES `students`(`std_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "report_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "studentId",
+            "columnName": "studentId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reportDesc",
+            "columnName": "report_desc",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "report_title",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "report_pk"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_reports_studentId",
+            "unique": false,
+            "columnNames": [
+              "studentId"
+            ],
+            "createSql": "CREATE  INDEX `index_reports_studentId` ON `${TABLE_NAME}` (`studentId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "students",
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "columns": [
+              "studentId"
+            ],
+            "referencedColumns": [
+              "std_pk"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "students",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`std_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `std_id` TEXT, `std_name` TEXT, `std_pass` TEXT, `std_image` BLOB, `std_tel` TEXT, `std_mob` TEXT, `std_city` TEXT, `std_state` TEXT, `std_add` TEXT, `std_email` TEXT, `std_birth_date` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "std_pk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "studentId",
+            "columnName": "std_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "studentName",
+            "columnName": "std_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "std_pass",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "std_image",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telephone",
+            "columnName": "std_tel",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobile",
+            "columnName": "std_mob",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "std_city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "state",
+            "columnName": "std_state",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "std_add",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "std_email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "birthdate",
+            "columnName": "std_birth_date",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "std_pk"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"e48cd2dd807b13422aba60dc56d78353\")"
+    ]
+  }
+}
