@@ -6,8 +6,8 @@ import java.util.Date;
 
 public class DateConverter {
     @TypeConverter
-    public static Date toDate(long timestamp) {
-        return new Date(timestamp);
+    public static Date toDate(long time) {
+        return new Date(time);
     }
 
     @TypeConverter

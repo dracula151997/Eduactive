@@ -31,7 +31,7 @@ import com.project.semicolon.eduactive.database.entities.StudentEntity;
         version = 1)
 @TypeConverters(DateConverter.class)
 public abstract class DatabaseClient extends RoomDatabase {
-    private static final String DB_NAME = "project.db";
+    private static final String DB_NAME = "graduation_project.db";
     private static volatile DatabaseClient instance;
 
     public static synchronized DatabaseClient getInstance(Context context) {
