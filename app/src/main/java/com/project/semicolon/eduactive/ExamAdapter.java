@@ -1,15 +1,14 @@
+package com.project.semicolon.eduactive;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.project.semicolon.eduactive.R;
 
 public class ExamAdapter extends RecyclerView.Adapter<ExamAdapter.ViewHolder> {
     @NonNull
@@ -33,7 +32,7 @@ public class ExamAdapter extends RecyclerView.Adapter<ExamAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public CardView cardView;
-        public ImageView imageView;
+        public ImageButton imageView;
         public TextView titleView,levelView1,yearView2,instView3;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

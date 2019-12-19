@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.project.semicolon.eduactive.ExamAdapter;
 import com.project.semicolon.eduactive.R;
 
 
@@ -39,6 +40,8 @@ public class ExamFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+        ExamAdapter adapter = new ExamAdapter();
 
 
         super.onViewCreated(view, savedInstanceState);
