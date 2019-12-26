@@ -1,12 +1,16 @@
 package com.project.semicolon.eduactive.adapters;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.semicolon.eduactive.databinding.StudyTimeTableItemBinding;
+import com.project.semicolon.eduactive.utils.AppHelper;
+import com.project.semicolon.eduactive.utils.ViewAnimation;
 
 import java.util.List;
 
@@ -29,8 +33,36 @@ public class StudyTimeTableAdapter extends
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.binding.setModel(modelList.get(position));
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
+        final StudyTimeTableModel model = modelList.get(position);
+        holder.binding.setModel(model);
+        holder.binding.btnExpand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean show = toggleExpandLayout(!model.expanded, view, holder.binding.expandLayout);
+                modelList.get(position).expanded = show;
+            }
+        });
+
+        if (model.expanded) {
+            holder.binding.expandLayout.setVisibility(View.VISIBLE);
+        } else {
+            holder.binding.expandLayout.setVisibility(View.GONE);
+        }
+
+        AppHelper.toggleArrow(model.expanded, holder.binding.btnExpand, false);
+
+    }
+
+    private boolean toggleExpandLayout(boolean show, View view, RelativeLayout expandLayout) {
+        AppHelper.toggleArrow(show, view);
+        if (show) {
+            ViewAnimation.expand(expandLayout);
+        } else {
+            ViewAnimation.collapse(expandLayout);
+        }
+
+        return show;
 
     }
 
@@ -47,4 +79,6 @@ public class StudyTimeTableAdapter extends
             this.binding = binding;
         }
     }
+
+
 }

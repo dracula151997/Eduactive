@@ -9,7 +9,10 @@ public class StudyTimeTableModel {
     private String instructorName;
     private String time;
     private String labCode;
+    private int weekNum;
     private int type;
+    public boolean expanded = false;
+    public boolean parent = false;
 
     public StudyTimeTableModel(String subjectName, String instuctorName, String time, String labCode) {
         this.subjectName = subjectName;
@@ -54,5 +57,13 @@ public class StudyTimeTableModel {
     public String convertTimestampToTime() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("h:mm a", Locale.ENGLISH);
         return dateFormat.format(new Date(time));
+    }
+
+    public void setWeekNum(int weekNum) {
+        this.weekNum = weekNum;
+    }
+
+    public int getWeekNum() {
+        return weekNum;
     }
 }
