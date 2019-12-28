@@ -2,8 +2,10 @@ package com.project.semicolon.eduactive.database.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.Arrays;
 import java.util.Date;
 
 @Entity(tableName = "students")
@@ -18,7 +20,9 @@ public class StudentEntity {
     @ColumnInfo(name = "std_pass")
     private String password;
     @ColumnInfo(name = "std_image", typeAffinity = ColumnInfo.BLOB)
+    @Ignore
     private byte[] image;
+    @Ignore
     @ColumnInfo(name = "std_tel")
     private String telephone;
     @ColumnInfo(name = "std_mob")
@@ -28,13 +32,25 @@ public class StudentEntity {
     @ColumnInfo(name = "std_state")
     private String state;
     @ColumnInfo(name = "std_add")
+    @Ignore
     private String address;
     @ColumnInfo(name = "std_email")
     private String email;
     @ColumnInfo(name = "std_birth_date")
+    @Ignore
     private Date birthdate;
 
+    @Ignore
     public StudentEntity() {
+    }
+
+    public StudentEntity(String studentId, String studentName, String password, String city, String state, String email) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.password = password;
+        this.city = city;
+        this.state = state;
+        this.email = email;
     }
 
     public int getUid() {
@@ -131,5 +147,23 @@ public class StudentEntity {
 
     public Date getBirthdate() {
         return birthdate;
+    }
+
+    @Override
+    public String toString() {
+        return "StudentEntity{" +
+                "uid=" + uid +
+                ", studentId='" + studentId + '\'' +
+                ", studentName='" + studentName + '\'' +
+                ", password='" + password + '\'' +
+                ", image=" + Arrays.toString(image) +
+                ", telephone='" + telephone + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", birthdate=" + birthdate +
+                '}';
     }
 }

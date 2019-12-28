@@ -13,7 +13,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.project.semicolon.eduactive.R;
-import com.project.semicolon.eduactive.adapters.News;
+import com.project.semicolon.eduactive.database.entities.NewsEntity;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -28,28 +28,24 @@ public abstract class NewsListItemBinding extends ViewDataBinding {
   public final LinearLayout lytParent;
 
   @NonNull
-  public final TextView subtitle;
-
-  @NonNull
   public final TextView title;
 
   @Bindable
-  protected News mNews;
+  protected NewsEntity mNews;
 
   protected NewsListItemBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView date, ImageView image, LinearLayout lytParent, TextView subtitle, TextView title) {
+      TextView date, ImageView image, LinearLayout lytParent, TextView title) {
     super(_bindingComponent, _root, _localFieldCount);
     this.date = date;
     this.image = image;
     this.lytParent = lytParent;
-    this.subtitle = subtitle;
     this.title = title;
   }
 
-  public abstract void setNews(@Nullable News news);
+  public abstract void setNews(@Nullable NewsEntity news);
 
   @Nullable
-  public News getNews() {
+  public NewsEntity getNews() {
     return mNews;
   }
 

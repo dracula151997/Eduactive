@@ -3,6 +3,7 @@ package com.project.semicolon.eduactive.database.entities;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
@@ -17,7 +18,7 @@ import java.util.Date;
         indices = {@Index("employeeId")})
 public class NewsEntity {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "news_pk")
+    @ColumnInfo(name = "article_pk")
     public int id;
     private int employeeId;
     @ColumnInfo(name = "created_at")
@@ -27,11 +28,21 @@ public class NewsEntity {
     @ColumnInfo(name = "article_desc")
     private String description;
     @ColumnInfo(name = "article_image")
-    private String image;
+    private int image;
     @ColumnInfo(name = "views_counter")
     private String viewsCounter;
 
+    @Ignore
     public NewsEntity() {
+    }
+
+    public NewsEntity(String title, String description, int image) {
+        this.title = title;
+        this.description = description;
+        this.image = image;
+        this.employeeId = 1;
+        createdAt = new Date(System.currentTimeMillis());
+
     }
 
     public int getId() {
@@ -74,11 +85,11 @@ public class NewsEntity {
         this.description = description;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
@@ -88,5 +99,22 @@ public class NewsEntity {
 
     public void setViewsCounter(String viewsCounter) {
         this.viewsCounter = viewsCounter;
+    }
+
+    @Override
+    public String toString() {
+        return "NewsEntity{" +
+                "id=" + id +
+                ", employeeId=" + employeeId +
+                ", createdAt=" + createdAt +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
+                ", viewsCounter='" + viewsCounter + '\'' +
+                '}';
+    }
+
+    public String convertDateToTime() {
+        return createdAt.getTime() + "";
     }
 }

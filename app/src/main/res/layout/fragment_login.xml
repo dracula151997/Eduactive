@@ -1,127 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context=".ui.fragments.LoginFragment">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data class="LoginFragmentBinding" />
 
-    <LinearLayout
-        android:layout_width="330dp"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:orientation="vertical"
-        android:padding="@dimen/spacing_large">
+        android:background="@android:color/white"
+        android:padding="@dimen/spacing_large"
+        tools:context=".ui.fragments.LoginFragment">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_middle" />
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:tint="@color/green_300" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_large" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/spacing_medium"
-            android:text="Welcome to Eduactive"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="@color/green_300"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/spacing_medium"
-            android:text="Sign in to continue"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-            android:textColor="@color/blue_grey_300" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="USERNAME"
-            android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-            android:textColor="@color/blue_grey_200" />
-
-        <com.google.android.material.textfield.TextInputEditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-4dp"
-            android:layout_marginRight="-4dp"
-            android:inputType="text"
-            android:maxLength="50"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textColor="@color/blue_grey_800"
-            android:theme="@style/EditText.Green" />
+            android:orientation="vertical"
+            android:id="@+id/ly"
+  >
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_mlarge" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PASSWORD"
-            android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-            android:textColor="@color/blue_grey_200" />
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:tint="@color/green_300" />
 
-        <com.google.android.material.textfield.TextInputEditText
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="Welcome to Eduactive"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/green_300"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="Sign in to continue"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/blue_grey_300" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_xlarge" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USERNAME"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/blue_grey_200" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:inputType="number"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/blue_grey_800"
+                android:theme="@style/EditText.Green" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_mlarge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/blue_grey_200" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/blue_grey_800"
+                android:theme="@style/EditText.Green" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_mxlarge" />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <io.rmiri.buttonloading.ButtonLoading
+            android:id="@+id/btn_sign_in"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="?actionBarSize"
             android:layout_marginLeft="-4dp"
             android:layout_marginRight="-4dp"
-            android:inputType="textPassword"
-            android:maxLength="50"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textColor="@color/blue_grey_800"
-            android:theme="@style/EditText.Green" />
-
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_mxlarge" />
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="-4dp"
-            android:layout_marginRight="-4dp"
-            android:background="@drawable/btn_rounded_green_300"
-            android:text="S I G N  I N"
+            app:BL_circleColor="@color/green_500"
+            app:BL_circleColorSecond="@color/green_200"
+            app:BL_enable="true"
+            android:layout_marginTop="32dp"
+            app:BL_stateShow="normal"
+            android:background="#80ffffff"
+            app:BL_text="Login"
+            app:BL_textSize="14sp"
+            android:layout_below="@id/ly"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
+            app:BL_textColor="#FFFFFF"
             android:textStyle="bold" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_medium" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_xlarge" />
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

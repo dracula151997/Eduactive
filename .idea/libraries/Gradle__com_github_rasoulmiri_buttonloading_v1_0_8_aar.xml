@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.rasoulmiri:buttonloading:v1.0.8@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/398cbed59a9e8b35286e7ae973d43d4c/jetified-buttonloading-v1.0.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/398cbed59a9e8b35286e7ae973d43d4c/jetified-buttonloading-v1.0.8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

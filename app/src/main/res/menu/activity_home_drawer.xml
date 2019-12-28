@@ -16,7 +16,7 @@
     <group android:id="@+id/group_2"
         android:checkableBehavior="single" >
 
-        <item android:id="@+id/study_time_table"
+        <item android:id="@+id/menu_study_time_table"
             android:title="@string/study_time_table"
             android:icon="@drawable/ic_date_range_black_24dp"
             app:actionLayout="@layout/study_time_table_action_view" />

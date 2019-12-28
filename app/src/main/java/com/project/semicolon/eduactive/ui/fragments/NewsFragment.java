@@ -2,6 +2,7 @@ package com.project.semicolon.eduactive.ui.fragments;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +10,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.semicolon.eduactive.R;
-import com.project.semicolon.eduactive.adapters.News;
 import com.project.semicolon.eduactive.adapters.NewsAdapter;
+import com.project.semicolon.eduactive.database.DatabaseClient;
+import com.project.semicolon.eduactive.database.entities.NewsEntity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -24,13 +26,19 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class NewsFragment extends Fragment {
+    private static final String TAG = "NewsFragment";
     private NewsAdapter adapter;
-
+    private DatabaseClient db;
 
     public NewsFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        db = DatabaseClient.getInstance(getContext());
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,19 +51,20 @@ public class NewsFragment extends Fragment {
         recycler.setAdapter(adapter);
         recycler.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        List<News> newsList = new ArrayList<>();
-        newsList.add(new News(R.drawable.ic_launcher_background, "Title 1", "Category 1", "Wed 15 2019"));
-        newsList.add(new News(R.drawable.ic_launcher_background, "Title 2", "Category 2", "Wed 15 2019"));
-        newsList.add(new News(R.drawable.ic_launcher_background, "Title 3", "Category 3", "Wed 15 2019"));
-        newsList.add(new News(R.drawable.ic_launcher_background, "Title 4", "Category 4", "Wed 15 2019"));
-        newsList.add(new News(R.drawable.ic_launcher_background, "Title 5", "Category 5", "Wed 15 2019"));
-        newsList.add(new News(R.drawable.ic_launcher_background, "Title 6", "Category 6", "Wed 15 2019"));
-        newsList.add(new News(R.drawable.ic_launcher_background, "Title 7", "Category 7", "Wed 15 2019"));
-
-        adapter.setNewsList(newsList);
+        fetchArticlesFromDatabase();
 
 
         return view;
+    }
+
+    private void fetchArticlesFromDatabase() {
+        db.getNewsDao().getAllArticles().observe(this, new Observer<List<NewsEntity>>() {
+            @Override
+            public void onChanged(List<NewsEntity> newsEntities) {
+                adapter.setNewsList(newsEntities);
+                Log.d(TAG, "onChanged: news: " + newsEntities.size());
+            }
+        });
     }
 
     @Override

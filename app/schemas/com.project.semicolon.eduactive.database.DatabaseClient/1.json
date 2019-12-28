@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "e48cd2dd807b13422aba60dc56d78353",
+    "identityHash": "0956bc03433a656f85217238fab6c2b8",
     "entities": [
       {
         "tableName": "courses",
@@ -511,11 +511,11 @@
       },
       {
         "tableName": "articles",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`news_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `employeeId` INTEGER NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` TEXT, `views_counter` TEXT, FOREIGN KEY(`employeeId`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`article_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `employeeId` INTEGER NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` INTEGER NOT NULL, `views_counter` TEXT, FOREIGN KEY(`employeeId`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
         "fields": [
           {
             "fieldPath": "id",
-            "columnName": "news_pk",
+            "columnName": "article_pk",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -546,8 +546,8 @@
           {
             "fieldPath": "image",
             "columnName": "article_image",
-            "affinity": "TEXT",
-            "notNull": false
+            "affinity": "INTEGER",
+            "notNull": true
           },
           {
             "fieldPath": "viewsCounter",
@@ -558,7 +558,7 @@
         ],
         "primaryKey": {
           "columnNames": [
-            "news_pk"
+            "article_pk"
           ],
           "autoGenerate": true
         },
@@ -647,7 +647,7 @@
       },
       {
         "tableName": "students",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`std_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `std_id` TEXT, `std_name` TEXT, `std_pass` TEXT, `std_image` BLOB, `std_tel` TEXT, `std_mob` TEXT, `std_city` TEXT, `std_state` TEXT, `std_add` TEXT, `std_email` TEXT, `std_birth_date` INTEGER)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`std_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `std_id` TEXT, `std_name` TEXT, `std_pass` TEXT, `std_mob` TEXT, `std_city` TEXT, `std_state` TEXT, `std_email` TEXT)",
         "fields": [
           {
             "fieldPath": "uid",
@@ -674,18 +674,6 @@
             "notNull": false
           },
           {
-            "fieldPath": "image",
-            "columnName": "std_image",
-            "affinity": "BLOB",
-            "notNull": false
-          },
-          {
-            "fieldPath": "telephone",
-            "columnName": "std_tel",
-            "affinity": "TEXT",
-            "notNull": false
-          },
-          {
             "fieldPath": "mobile",
             "columnName": "std_mob",
             "affinity": "TEXT",
@@ -704,21 +692,9 @@
             "notNull": false
           },
           {
-            "fieldPath": "address",
-            "columnName": "std_add",
-            "affinity": "TEXT",
-            "notNull": false
-          },
-          {
             "fieldPath": "email",
             "columnName": "std_email",
             "affinity": "TEXT",
-            "notNull": false
-          },
-          {
-            "fieldPath": "birthdate",
-            "columnName": "std_birth_date",
-            "affinity": "INTEGER",
             "notNull": false
           }
         ],
@@ -734,7 +710,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"e48cd2dd807b13422aba60dc56d78353\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"0956bc03433a656f85217238fab6c2b8\")"
     ]
   }
 }

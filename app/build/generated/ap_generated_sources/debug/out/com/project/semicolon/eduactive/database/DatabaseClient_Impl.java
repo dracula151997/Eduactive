@@ -12,6 +12,10 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
+import com.project.semicolon.eduactive.database.daos.NewsDao;
+import com.project.semicolon.eduactive.database.daos.NewsDao_Impl;
+import com.project.semicolon.eduactive.database.daos.StudentDao;
+import com.project.semicolon.eduactive.database.daos.StudentDao_Impl;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,6 +26,10 @@ import java.util.HashSet;
 
 @SuppressWarnings("unchecked")
 public final class DatabaseClient_Impl extends DatabaseClient {
+  private volatile StudentDao _studentDao;
+
+  private volatile NewsDao _newsDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
@@ -38,13 +46,13 @@ public final class DatabaseClient_Impl extends DatabaseClient {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `instructors` (`inst_pk` INTEGER NOT NULL, `inst_first_name` TEXT, `inst_last_name` TEXT, `inst_code` TEXT, `inst_job_title` TEXT, `inst_image` BLOB, `inst_mobile` TEXT, `inst_telephone` TEXT, `inst_user_name` TEXT, `inst_password` TEXT, `inst_state` TEXT, `inst_city` TEXT, `inst_address` TEXT, `inst_email` TEXT, `created_at` INTEGER, PRIMARY KEY(`inst_pk`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `labs` (`lab_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `labSupervisor` INTEGER NOT NULL, `lab_code` TEXT, `students_num` TEXT, FOREIGN KEY(`labSupervisor`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )");
         _db.execSQL("CREATE  INDEX `index_labs_labSupervisor` ON `labs` (`labSupervisor`)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `articles` (`news_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `employeeId` INTEGER NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` TEXT, `views_counter` TEXT, FOREIGN KEY(`employeeId`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `articles` (`article_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `employeeId` INTEGER NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` INTEGER NOT NULL, `views_counter` TEXT, FOREIGN KEY(`employeeId`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )");
         _db.execSQL("CREATE  INDEX `index_articles_employeeId` ON `articles` (`employeeId`)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `reports` (`report_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `studentId` INTEGER NOT NULL, `report_desc` TEXT, `report_title` TEXT, FOREIGN KEY(`studentId`) REFERENCES `students`(`std_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )");
         _db.execSQL("CREATE  INDEX `index_reports_studentId` ON `reports` (`studentId`)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `students` (`std_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `std_id` TEXT, `std_name` TEXT, `std_pass` TEXT, `std_image` BLOB, `std_tel` TEXT, `std_mob` TEXT, `std_city` TEXT, `std_state` TEXT, `std_add` TEXT, `std_email` TEXT, `std_birth_date` INTEGER)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `students` (`std_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `std_id` TEXT, `std_name` TEXT, `std_pass` TEXT, `std_mob` TEXT, `std_city` TEXT, `std_state` TEXT, `std_email` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"e48cd2dd807b13422aba60dc56d78353\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"0956bc03433a656f85217238fab6c2b8\")");
       }
 
       @Override
@@ -207,12 +215,12 @@ public final class DatabaseClient_Impl extends DatabaseClient {
                   + " Found:\n" + _existingLabs);
         }
         final HashMap<String, TableInfo.Column> _columnsArticles = new HashMap<String, TableInfo.Column>(7);
-        _columnsArticles.put("news_pk", new TableInfo.Column("news_pk", "INTEGER", true, 1));
+        _columnsArticles.put("article_pk", new TableInfo.Column("article_pk", "INTEGER", true, 1));
         _columnsArticles.put("employeeId", new TableInfo.Column("employeeId", "INTEGER", true, 0));
         _columnsArticles.put("created_at", new TableInfo.Column("created_at", "INTEGER", false, 0));
         _columnsArticles.put("article_title", new TableInfo.Column("article_title", "TEXT", false, 0));
         _columnsArticles.put("article_desc", new TableInfo.Column("article_desc", "TEXT", false, 0));
-        _columnsArticles.put("article_image", new TableInfo.Column("article_image", "TEXT", false, 0));
+        _columnsArticles.put("article_image", new TableInfo.Column("article_image", "INTEGER", true, 0));
         _columnsArticles.put("views_counter", new TableInfo.Column("views_counter", "TEXT", false, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysArticles = new HashSet<TableInfo.ForeignKey>(1);
         _foreignKeysArticles.add(new TableInfo.ForeignKey("employees", "RESTRICT", "RESTRICT",Arrays.asList("employeeId"), Arrays.asList("emp_pk")));
@@ -241,19 +249,15 @@ public final class DatabaseClient_Impl extends DatabaseClient {
                   + " Expected:\n" + _infoReports + "\n"
                   + " Found:\n" + _existingReports);
         }
-        final HashMap<String, TableInfo.Column> _columnsStudents = new HashMap<String, TableInfo.Column>(12);
+        final HashMap<String, TableInfo.Column> _columnsStudents = new HashMap<String, TableInfo.Column>(8);
         _columnsStudents.put("std_pk", new TableInfo.Column("std_pk", "INTEGER", true, 1));
         _columnsStudents.put("std_id", new TableInfo.Column("std_id", "TEXT", false, 0));
         _columnsStudents.put("std_name", new TableInfo.Column("std_name", "TEXT", false, 0));
         _columnsStudents.put("std_pass", new TableInfo.Column("std_pass", "TEXT", false, 0));
-        _columnsStudents.put("std_image", new TableInfo.Column("std_image", "BLOB", false, 0));
-        _columnsStudents.put("std_tel", new TableInfo.Column("std_tel", "TEXT", false, 0));
         _columnsStudents.put("std_mob", new TableInfo.Column("std_mob", "TEXT", false, 0));
         _columnsStudents.put("std_city", new TableInfo.Column("std_city", "TEXT", false, 0));
         _columnsStudents.put("std_state", new TableInfo.Column("std_state", "TEXT", false, 0));
-        _columnsStudents.put("std_add", new TableInfo.Column("std_add", "TEXT", false, 0));
         _columnsStudents.put("std_email", new TableInfo.Column("std_email", "TEXT", false, 0));
-        _columnsStudents.put("std_birth_date", new TableInfo.Column("std_birth_date", "INTEGER", false, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysStudents = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesStudents = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoStudents = new TableInfo("students", _columnsStudents, _foreignKeysStudents, _indicesStudents);
@@ -264,7 +268,7 @@ public final class DatabaseClient_Impl extends DatabaseClient {
                   + " Found:\n" + _existingStudents);
         }
       }
-    }, "e48cd2dd807b13422aba60dc56d78353", "36c7432f440f88df6fc22e2e5f4540c4");
+    }, "0956bc03433a656f85217238fab6c2b8", "15c30067e3a9350430990df3f04f252e");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -309,6 +313,34 @@ public final class DatabaseClient_Impl extends DatabaseClient {
       _db.query("PRAGMA wal_checkpoint(FULL)").close();
       if (!_db.inTransaction()) {
         _db.execSQL("VACUUM");
+      }
+    }
+  }
+
+  @Override
+  public StudentDao getStudentDao() {
+    if (_studentDao != null) {
+      return _studentDao;
+    } else {
+      synchronized(this) {
+        if(_studentDao == null) {
+          _studentDao = new StudentDao_Impl(this);
+        }
+        return _studentDao;
+      }
+    }
+  }
+
+  @Override
+  public NewsDao getNewsDao() {
+    if (_newsDao != null) {
+      return _newsDao;
+    } else {
+      synchronized(this) {
+        if(_newsDao == null) {
+          _newsDao = new NewsDao_Impl(this);
+        }
+        return _newsDao;
       }
     }
   }

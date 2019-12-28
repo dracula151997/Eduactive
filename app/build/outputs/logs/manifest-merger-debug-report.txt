@@ -8,6 +8,7 @@ MERGED from [androidx.databinding:databinding-adapters:3.5.2] /home/hassan/.grad
 MERGED from [androidx.databinding:databinding-runtime:3.5.2] /home/hassan/.gradle/caches/transforms-2/files-2.1/cd6bfa6d3ca2328a1ef49dae3903f7b2/databinding-runtime-3.5.2/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.1.0] /home/hassan/.gradle/caches/transforms-2/files-2.1/15da6d99e8c12007489d6687ee34ed48/jetified-navigation-ui-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.0.0] /home/hassan/.gradle/caches/transforms-2/files-2.1/2946ca0ea6c89dab7d7d9fbc18e54292/material-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.rasoulmiri:buttonloading:v1.0.8] /home/hassan/.gradle/caches/transforms-2/files-2.1/398cbed59a9e8b35286e7ae973d43d4c/jetified-buttonloading-v1.0.8/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.ChargeMap:android-tableView:1.2.1] /home/hassan/.gradle/caches/transforms-2/files-2.1/c3f9db9c38f65ebaa1d36eb0fb80e7ee/jetified-android-tableView-1.2.1/AndroidManifest.xml:2:1-16:12
 MERGED from [com.evrencoskun.library:tableview:0.8.8] /home/hassan/.gradle/caches/transforms-2/files-2.1/0dbb801dbb84468d4f2f4a72827f4ddf/jetified-tableview-0.8.8/AndroidManifest.xml:18:1-33:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/hassan/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -76,6 +77,8 @@ application
 ADDED from /media/hassan/E2E8C9A5E8C97875/Special documents/Eduactive/app/src/main/AndroidManifest.xml:5:5-21:19
 MERGED from [com.google.android.material:material:1.0.0] /home/hassan/.gradle/caches/transforms-2/files-2.1/2946ca0ea6c89dab7d7d9fbc18e54292/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /home/hassan/.gradle/caches/transforms-2/files-2.1/2946ca0ea6c89dab7d7d9fbc18e54292/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.github.rasoulmiri:buttonloading:v1.0.8] /home/hassan/.gradle/caches/transforms-2/files-2.1/398cbed59a9e8b35286e7ae973d43d4c/jetified-buttonloading-v1.0.8/AndroidManifest.xml:11:5-20
+MERGED from [com.github.rasoulmiri:buttonloading:v1.0.8] /home/hassan/.gradle/caches/transforms-2/files-2.1/398cbed59a9e8b35286e7ae973d43d4c/jetified-buttonloading-v1.0.8/AndroidManifest.xml:11:5-20
 MERGED from [com.github.ChargeMap:android-tableView:1.2.1] /home/hassan/.gradle/caches/transforms-2/files-2.1/c3f9db9c38f65ebaa1d36eb0fb80e7ee/jetified-android-tableView-1.2.1/AndroidManifest.xml:11:5-14:19
 MERGED from [com.github.ChargeMap:android-tableView:1.2.1] /home/hassan/.gradle/caches/transforms-2/files-2.1/c3f9db9c38f65ebaa1d36eb0fb80e7ee/jetified-android-tableView-1.2.1/AndroidManifest.xml:11:5-14:19
 MERGED from [com.evrencoskun.library:tableview:0.8.8] /home/hassan/.gradle/caches/transforms-2/files-2.1/0dbb801dbb84468d4f2f4a72827f4ddf/jetified-tableview-0.8.8/AndroidManifest.xml:27:5-31:19
@@ -106,12 +109,12 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/hassa
 		ADDED from /media/hassan/E2E8C9A5E8C97875/Special documents/Eduactive/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from /media/hassan/E2E8C9A5E8C97875/Special documents/Eduactive/app/src/main/AndroidManifest.xml:11:9-40
-activity#com.project.semicolon.eduactive.HomeActivity
+activity#com.project.semicolon.eduactive.ui.activity.HomeActivity
 ADDED from /media/hassan/E2E8C9A5E8C97875/Special documents/Eduactive/app/src/main/AndroidManifest.xml:12:9-20:20
 	android:theme
 		ADDED from /media/hassan/E2E8C9A5E8C97875/Special documents/Eduactive/app/src/main/AndroidManifest.xml:14:13-56
 	android:name
-		ADDED from /media/hassan/E2E8C9A5E8C97875/Special documents/Eduactive/app/src/main/AndroidManifest.xml:13:13-41
+		ADDED from /media/hassan/E2E8C9A5E8C97875/Special documents/Eduactive/app/src/main/AndroidManifest.xml:13:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /media/hassan/E2E8C9A5E8C97875/Special documents/Eduactive/app/src/main/AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
@@ -134,6 +137,8 @@ MERGED from [androidx.navigation:navigation-ui:2.1.0] /home/hassan/.gradle/cache
 MERGED from [androidx.navigation:navigation-ui:2.1.0] /home/hassan/.gradle/caches/transforms-2/files-2.1/15da6d99e8c12007489d6687ee34ed48/jetified-navigation-ui-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.0.0] /home/hassan/.gradle/caches/transforms-2/files-2.1/2946ca0ea6c89dab7d7d9fbc18e54292/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] /home/hassan/.gradle/caches/transforms-2/files-2.1/2946ca0ea6c89dab7d7d9fbc18e54292/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.rasoulmiri:buttonloading:v1.0.8] /home/hassan/.gradle/caches/transforms-2/files-2.1/398cbed59a9e8b35286e7ae973d43d4c/jetified-buttonloading-v1.0.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.rasoulmiri:buttonloading:v1.0.8] /home/hassan/.gradle/caches/transforms-2/files-2.1/398cbed59a9e8b35286e7ae973d43d4c/jetified-buttonloading-v1.0.8/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.ChargeMap:android-tableView:1.2.1] /home/hassan/.gradle/caches/transforms-2/files-2.1/c3f9db9c38f65ebaa1d36eb0fb80e7ee/jetified-android-tableView-1.2.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.ChargeMap:android-tableView:1.2.1] /home/hassan/.gradle/caches/transforms-2/files-2.1/c3f9db9c38f65ebaa1d36eb0fb80e7ee/jetified-android-tableView-1.2.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.evrencoskun.library:tableview:0.8.8] /home/hassan/.gradle/caches/transforms-2/files-2.1/0dbb801dbb84468d4f2f4a72827f4ddf/jetified-tableview-0.8.8/AndroidManifest.xml:23:5-25:41

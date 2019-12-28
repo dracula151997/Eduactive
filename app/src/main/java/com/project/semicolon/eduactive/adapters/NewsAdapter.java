@@ -6,16 +6,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.project.semicolon.eduactive.database.entities.NewsEntity;
 import com.project.semicolon.eduactive.databinding.NewsListItemBinding;
 
 import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
-    private List<News> newsList;
+    private List<NewsEntity> articles;
 
 
-    public void setNewsList(List<News> newsList) {
-        this.newsList = newsList;
+    public void setNewsList(List<NewsEntity> articles) {
+        this.articles = articles;
         notifyDataSetChanged();
 
     }
@@ -29,14 +30,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull NewsAdapter.ViewHolder holder, int position) {
-        News news = newsList.get(position);
-        holder.itemBinding.setNews(news);
+        NewsEntity article = articles.get(position);
+        holder.itemBinding.setNews(article);
 
     }
 
     @Override
     public int getItemCount() {
-        return newsList.size();
+        if (articles == null) return 0;
+        return articles.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

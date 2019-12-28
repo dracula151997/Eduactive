@@ -11,6 +11,7 @@ import android.view.WindowManager;
 
 import androidx.annotation.ColorRes;
 import androidx.core.content.ContextCompat;
+import androidx.navigation.Navigation;
 
 import com.project.semicolon.eduactive.R;
 
@@ -104,6 +105,16 @@ public class AppHelper {
             view.animate().setDuration(delay ? 200 : 0).rotation(0);
             return false;
         }
+    }
+
+    public static void navigate(View view, int fragmentId) {
+        Navigation.findNavController(view)
+                .navigate(fragmentId);
+    }
+
+    public static void navigate(Activity activity, int viewId, int fragmentId){
+        Navigation.findNavController(activity, viewId)
+                .navigate(fragmentId);
     }
 
 

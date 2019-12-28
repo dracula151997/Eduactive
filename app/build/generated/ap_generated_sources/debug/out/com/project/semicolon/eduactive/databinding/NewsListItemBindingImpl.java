@@ -22,20 +22,18 @@ public class NewsListItemBindingImpl extends NewsListItemBinding  {
     // Inverse Binding Event Handlers
 
     public NewsListItemBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private NewsListItemBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.TextView) bindings[4]
+            , (android.widget.TextView) bindings[3]
             , (android.widget.ImageView) bindings[1]
             , (android.widget.LinearLayout) bindings[0]
-            , (android.widget.TextView) bindings[3]
             , (android.widget.TextView) bindings[2]
             );
         this.date.setTag(null);
         this.image.setTag(null);
         this.lytParent.setTag(null);
-        this.subtitle.setTag(null);
         this.title.setTag(null);
         setRootTag(root);
         // listeners
@@ -64,7 +62,7 @@ public class NewsListItemBindingImpl extends NewsListItemBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.news == variableId) {
-            setNews((com.project.semicolon.eduactive.adapters.News) variable);
+            setNews((com.project.semicolon.eduactive.database.entities.NewsEntity) variable);
         }
         else {
             variableSet = false;
@@ -72,7 +70,7 @@ public class NewsListItemBindingImpl extends NewsListItemBinding  {
             return variableSet;
     }
 
-    public void setNews(@Nullable com.project.semicolon.eduactive.adapters.News News) {
+    public void setNews(@Nullable com.project.semicolon.eduactive.database.entities.NewsEntity News) {
         this.mNews = News;
         synchronized(this) {
             mDirtyFlags |= 0x1L;
@@ -95,10 +93,9 @@ public class NewsListItemBindingImpl extends NewsListItemBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        com.project.semicolon.eduactive.adapters.News news = mNews;
-        java.lang.String newsDate = null;
+        java.lang.String newsConvertDateToTime = null;
+        com.project.semicolon.eduactive.database.entities.NewsEntity news = mNews;
         int newsImage = 0;
-        java.lang.String newsCategory = null;
         java.lang.String newsTitle = null;
 
         if ((dirtyFlags & 0x3L) != 0) {
@@ -106,12 +103,10 @@ public class NewsListItemBindingImpl extends NewsListItemBinding  {
 
 
                 if (news != null) {
-                    // read news.date
-                    newsDate = news.getDate();
+                    // read news.convertDateToTime()
+                    newsConvertDateToTime = news.convertDateToTime();
                     // read news.image
                     newsImage = news.getImage();
-                    // read news.category
-                    newsCategory = news.getCategory();
                     // read news.title
                     newsTitle = news.getTitle();
                 }
@@ -120,9 +115,8 @@ public class NewsListItemBindingImpl extends NewsListItemBinding  {
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.date, newsDate);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.date, newsConvertDateToTime);
             androidx.databinding.adapters.ImageViewBindingAdapter.setImageDrawable(this.image, androidx.databinding.adapters.Converters.convertColorToDrawable(newsImage));
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtitle, newsCategory);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.title, newsTitle);
         }
     }
