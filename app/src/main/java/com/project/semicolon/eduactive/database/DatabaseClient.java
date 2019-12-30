@@ -1,6 +1,7 @@
 package com.project.semicolon.eduactive.database;
 
 import android.content.Context;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -40,6 +41,7 @@ import java.util.List;
         version = 1)
 @TypeConverters(DateConverter.class)
 public abstract class DatabaseClient extends RoomDatabase {
+    private static final String TAG = "DatabaseClient";
     private static final String DB_NAME = "graduation_project.db";
     private static volatile DatabaseClient instance;
 
@@ -89,10 +91,16 @@ public abstract class DatabaseClient extends RoomDatabase {
                         "scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia. Sed congue, elit sed consequat auctor, nunc nulla vulputate dui, nec tempus mauris erat eget ipsum. Suspendisse sagittis. Nullam vitae diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu, placerat eget, venenatis a, magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam laoreet, libero et tristique pellentesque, tellus sem mollis dui, in sodales elit erat vitae risus. Duis",
                         R.drawable.article_3));
 
+
                 getInstance(context)
                         .getStudentDao().insetStudents(studentList);
+                Log.d(TAG, "run: student database created...");
+
                 getInstance(context)
                         .getNewsDao().insertArticleList(articleList);
+                Log.d(TAG, "run: article database created...");
+
+
             }
         });
 

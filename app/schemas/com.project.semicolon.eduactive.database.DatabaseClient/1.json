@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "0956bc03433a656f85217238fab6c2b8",
+    "identityHash": "93e9ae5a1f68e60e086bf4f6ba38c1e6",
     "entities": [
       {
         "tableName": "courses",
@@ -511,17 +511,11 @@
       },
       {
         "tableName": "articles",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`article_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `employeeId` INTEGER NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` INTEGER NOT NULL, `views_counter` TEXT, FOREIGN KEY(`employeeId`) REFERENCES `employees`(`emp_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`article_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
             "columnName": "article_pk",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "employeeId",
-            "columnName": "employeeId",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -548,12 +542,6 @@
             "columnName": "article_image",
             "affinity": "INTEGER",
             "notNull": true
-          },
-          {
-            "fieldPath": "viewsCounter",
-            "columnName": "views_counter",
-            "affinity": "TEXT",
-            "notNull": false
           }
         ],
         "primaryKey": {
@@ -562,29 +550,8 @@
           ],
           "autoGenerate": true
         },
-        "indices": [
-          {
-            "name": "index_articles_employeeId",
-            "unique": false,
-            "columnNames": [
-              "employeeId"
-            ],
-            "createSql": "CREATE  INDEX `index_articles_employeeId` ON `${TABLE_NAME}` (`employeeId`)"
-          }
-        ],
-        "foreignKeys": [
-          {
-            "table": "employees",
-            "onDelete": "RESTRICT",
-            "onUpdate": "RESTRICT",
-            "columns": [
-              "employeeId"
-            ],
-            "referencedColumns": [
-              "emp_pk"
-            ]
-          }
-        ]
+        "indices": [],
+        "foreignKeys": []
       },
       {
         "tableName": "reports",
@@ -710,7 +677,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"0956bc03433a656f85217238fab6c2b8\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"93e9ae5a1f68e60e086bf4f6ba38c1e6\")"
     ]
   }
 }

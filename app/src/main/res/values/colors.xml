@@ -333,4 +333,12 @@
         <item type="color">#ff9800</item>
     </array>
 
+    <array name="random_color">
+        <item type="color">#E57373</item>
+        <item type="color">#FFB74D</item>
+        <item type="color">#64B5F6</item>
+        <item type="color">#DCE775</item>
+        <item type="color">#AED581</item>
+    </array>
+
 </resources>

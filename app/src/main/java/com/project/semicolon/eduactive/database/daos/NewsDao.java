@@ -17,7 +17,7 @@ public interface NewsDao {
     @Insert(onConflict = REPLACE)
     long insertArticle(NewsEntity article);
 
-    @Insert(onConflict = REPLACE)
+    @Insert
     List<Long> insertArticleList(List<NewsEntity> articles);
 
     @Query("DELETE FROM articles")

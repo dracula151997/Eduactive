@@ -2,33 +2,35 @@ package com.project.semicolon.eduactive.database.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
 import androidx.room.Ignore;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
-@Entity(tableName = "articles",
-        foreignKeys = @ForeignKey(entity = EmployeesEntity.class,
+/*
+foreignKeys = @ForeignKey(entity = EmployeesEntity.class,
                 parentColumns = "emp_pk",
-                childColumns = "employeeId",
-                onDelete = ForeignKey.RESTRICT,
-                onUpdate = ForeignKey.RESTRICT),
-        indices = {@Index("employeeId")})
+                childColumns = "employeeId"),
+        indices = {@Index("employeeId")}
+ */
+@Entity(tableName = "articles")
 public class NewsEntity {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "article_pk")
     public int id;
+    @Ignore
     private int employeeId;
     @ColumnInfo(name = "created_at")
-    private Date createdAt;
+    private Date createdAt = new Date(System.currentTimeMillis());
     @ColumnInfo(name = "article_title")
     private String title;
     @ColumnInfo(name = "article_desc")
     private String description;
     @ColumnInfo(name = "article_image")
     private int image;
+    @Ignore
     @ColumnInfo(name = "views_counter")
     private String viewsCounter;
 
@@ -36,13 +38,11 @@ public class NewsEntity {
     public NewsEntity() {
     }
 
+
     public NewsEntity(String title, String description, int image) {
         this.title = title;
         this.description = description;
         this.image = image;
-        this.employeeId = 1;
-        createdAt = new Date(System.currentTimeMillis());
-
     }
 
     public int getId() {
@@ -115,6 +115,7 @@ public class NewsEntity {
     }
 
     public String convertDateToTime() {
-        return createdAt.getTime() + "";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd hh:mm a", Locale.ENGLISH);
+        return dateFormat.format(createdAt);
     }
 }
