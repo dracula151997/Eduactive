@@ -4,8 +4,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.Date;
-
 @Entity(tableName = "exams_bank")
 public class ExamsBankEntity {
     @PrimaryKey(autoGenerate = true)
@@ -18,7 +16,7 @@ public class ExamsBankEntity {
     @ColumnInfo(name = "has_model_answer")
     private boolean hasModelAnswer;
     @ColumnInfo(name = "exam_year")
-    private Date year;
+    private String year;
     @ColumnInfo(name = "instructor_name")
     private String instructorName;
     @ColumnInfo(name = "exam_type")
@@ -27,6 +25,18 @@ public class ExamsBankEntity {
     private byte level;
     @ColumnInfo(name = "course_name")
     private String courseName;
+
+    public ExamsBankEntity(String pdf, String modelAnswer, boolean hasModelAnswer, String year,
+                           String instructorName, byte type, byte level, String courseName) {
+        this.pdf = pdf;
+        this.modelAnswer = modelAnswer;
+        this.hasModelAnswer = hasModelAnswer;
+        this.year = year;
+        this.instructorName = instructorName;
+        this.type = type;
+        this.level = level;
+        this.courseName = courseName;
+    }
 
     public int getEid() {
         return eid;
@@ -60,11 +70,11 @@ public class ExamsBankEntity {
         this.hasModelAnswer = hasModelAnswer;
     }
 
-    public Date getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(Date year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -98,5 +108,43 @@ public class ExamsBankEntity {
 
     public void setCourseName(String courseName) {
         this.courseName = courseName;
+    }
+
+    public String getExamLevel() {
+        String levelName = "";
+        switch (level) {
+            case 0:
+                levelName = "Level 000";
+                break;
+            case 1:
+                levelName = "Level 100";
+                break;
+            case 2:
+                levelName = "Level 200";
+                break;
+            case 3:
+                levelName = "Level 300";
+                break;
+            case 4:
+                levelName = "Level 400";
+        }
+
+        return levelName;
+    }
+
+    public String getExamType() {
+        String examType = "";
+        switch (type) {
+            case 0:
+                examType = "Mid Term " + year;
+                break;
+            case 1:
+                examType = "Final " + year;
+                break;
+
+
+        }
+
+        return examType;
     }
 }

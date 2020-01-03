@@ -2,9 +2,11 @@ package com.project.semicolon.eduactive.ui.fragments;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,6 +23,7 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class StudyTimeTableFragment extends Fragment {
+    private static final String TAG = "StudyTimeTableFragment";
 
 
     public StudyTimeTableFragment() {
@@ -41,8 +44,8 @@ public class StudyTimeTableFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         CourseTableLayout courseTableLayout = view.findViewById(R.id.study_time_table);
-        CourseInfo courseInfo = new CourseInfo();
-        ArrayList<CourseInfo> courseInfoList = new ArrayList<>();
+        final CourseInfo courseInfo = new CourseInfo();
+        final ArrayList<CourseInfo> courseInfoList = new ArrayList<>();
         courseInfo.setName("Human Computer Interaction");
         courseInfo.setCourseTime("1", "", "", "",
                 "", "", "");
@@ -64,6 +67,15 @@ public class StudyTimeTableFragment extends Fragment {
 
         studentCourse.setCourseList(courseInfoList);
         courseTableLayout.setStudentCourse(studentCourse);
+
+        courseTableLayout.setOnCourseClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CourseInfo tag = (CourseInfo) view.getTag();
+                Log.d(TAG, "onClick: " + tag.getName());
+                Toast.makeText(getContext(), "" + tag.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 

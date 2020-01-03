@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "93e9ae5a1f68e60e086bf4f6ba38c1e6",
+    "identityHash": "c06d0e549d2d769ca0e301cb238b32f0",
     "entities": [
       {
         "tableName": "courses",
@@ -280,7 +280,7 @@
       },
       {
         "tableName": "exams_bank",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`exam_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `exams_pdf` TEXT, `model_answer` TEXT, `has_model_answer` INTEGER NOT NULL, `exam_year` INTEGER, `instructor_name` TEXT, `exam_type` INTEGER NOT NULL, `level` INTEGER NOT NULL, `course_name` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`exam_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `exams_pdf` TEXT, `model_answer` TEXT, `has_model_answer` INTEGER NOT NULL, `exam_year` TEXT, `instructor_name` TEXT, `exam_type` INTEGER NOT NULL, `level` INTEGER NOT NULL, `course_name` TEXT)",
         "fields": [
           {
             "fieldPath": "eid",
@@ -309,7 +309,7 @@
           {
             "fieldPath": "year",
             "columnName": "exam_year",
-            "affinity": "INTEGER",
+            "affinity": "TEXT",
             "notNull": false
           },
           {
@@ -677,7 +677,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"93e9ae5a1f68e60e086bf4f6ba38c1e6\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"c06d0e549d2d769ca0e301cb238b32f0\")"
     ]
   }
 }

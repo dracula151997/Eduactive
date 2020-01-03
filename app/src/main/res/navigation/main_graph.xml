@@ -20,4 +20,9 @@
         android:name="com.project.semicolon.eduactive.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/examsBankFragment"
+        android:name="com.project.semicolon.eduactive.ui.fragments.ExamsBankFragment"
+        android:label="fragment_exams_bank"
+        tools:layout="@layout/fragment_exams_bank" />
 </navigation>

@@ -118,7 +118,7 @@ public class CourseTableLayout extends LinearLayout {
                 ROW_HEIGHT);
         LayoutParams cellParams = new LayoutParams(0,
                 LayoutParams.MATCH_PARENT, 1f);
-        LayoutParams title_col_params = new LayoutParams(0,
+        LayoutParams titleColParams = new LayoutParams(0,
                 LayoutParams.MATCH_PARENT, 0.5f);
         for (int i = 0; i < TABLE_ROW; i++) {
             LinearLayout tableRow = new LinearLayout(getContext());
@@ -140,7 +140,7 @@ public class CourseTableLayout extends LinearLayout {
                 cellParams.setMargins(5, 5, 5, 5);
 //                    tableCell.setBackgroundResource(R.drawable.shape);
 //                    tableCell.setElevation(20.0f);
-                tableCell.setLayoutParams(j == 0 ? title_col_params
+                tableCell.setLayoutParams(j == 0 ? titleColParams
                         : cellParams);
                 tableRow.addView(tableCell);
             }

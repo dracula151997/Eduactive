@@ -42,7 +42,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
 
-
         controller = Navigation.findNavController(this, R.id.nav_host_fragment);
         appBarConfiguration = new AppBarConfiguration.Builder(controller.getGraph())
                 .setDrawerLayout(drawerLayout)
@@ -100,6 +99,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
             case R.id.menu_study_time_table:
                 controller.navigate(R.id.studyTimeTableFragment);
+                return true;
+            case R.id.menu_exam_bank:
+                controller.navigate(R.id.examsBankFragment);
                 return true;
 
 
