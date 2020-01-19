@@ -3,10 +3,9 @@ package com.project.semicolon.eduactive.database.entities;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
-
-import java.util.Date;
 
 @Entity(tableName = "employees",
         foreignKeys = @ForeignKey(
@@ -15,19 +14,26 @@ import java.util.Date;
                 childColumns = "departmentId"),
         indices = {@Index("departmentId")})
 public class EmployeesEntity {
+    //emp_pk column: as auto generated primary key
     @PrimaryKey
     @ColumnInfo(name = "emp_pk")
     public int eid;
+    //emp_name: employee name
     @ColumnInfo(name = "emp_name")
     private String employeeName;
-    @ColumnInfo(name = "emp_birth_date")
-    private Date birthdate;
+    //emp_birth_date: employee birth date
+//    @ColumnInfo(name = "emp_birth_date")
+//    private Date birthdate;
+    //emp_state: employee state
     @ColumnInfo(name = "emp_state")
     private String state;
+    //emp_city: employee city
     @ColumnInfo(name = "emp_city")
     private String city;
+    //emp_address: employee address
     @ColumnInfo(name = "emp_address")
     private String address;
+    //salary: employee sallery
     @ColumnInfo(name = "salary")
     private String salary;
     @ColumnInfo(name = "emp_email")
@@ -39,6 +45,20 @@ public class EmployeesEntity {
     @ColumnInfo(name = "emp_mob")
     private String mobile;
     private int departmentId;
+
+    @Ignore
+    public EmployeesEntity() {
+    }
+
+
+    public EmployeesEntity(String employeeName, String state, String city, String email, String mobile, int departmentId) {
+        this.employeeName = employeeName;
+        this.state = state;
+        this.city = city;
+        this.email = email;
+        this.mobile = mobile;
+        this.departmentId = departmentId;
+    }
 
     public int getDepartmentId() {
         return departmentId;
@@ -64,13 +84,13 @@ public class EmployeesEntity {
         this.employeeName = employeeName;
     }
 
-    public Date getBirthdate() {
-        return birthdate;
-    }
-
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
-    }
+//    public Date getBirthdate() {
+//        return birthdate;
+//    }
+//
+//    public void setBirthdate(Date birthdate) {
+//        this.birthdate = birthdate;
+//    }
 
     public String getState() {
         return state;

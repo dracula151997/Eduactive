@@ -2,13 +2,16 @@ package com.project.semicolon.eduactive.database.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.Arrays;
 import java.util.Date;
 
 @Entity(tableName = "instructors")
 public class InstructorsEntity {
-    @PrimaryKey
+
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "inst_pk")
     public int id;
     @ColumnInfo(name = "inst_first_name")
@@ -40,7 +43,24 @@ public class InstructorsEntity {
     @ColumnInfo(name = "created_at")
     private Date createdAt;
 
+
+    @Ignore
     public InstructorsEntity() {
+    }
+
+    public InstructorsEntity(String firstName, String lastName, String code, String jobTitle, String mobile,
+                             String username, String password, String state, String city, String email) {
+        createdAt = new Date();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.code = code;
+        this.jobTitle = jobTitle;
+        this.mobile = mobile;
+        this.username = username;
+        this.password = password;
+        this.state = state;
+        this.city = city;
+        this.email = email;
     }
 
     public int getId() {
@@ -161,5 +181,26 @@ public class InstructorsEntity {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        return "InstructorsEntity{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", code='" + code + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", image=" + Arrays.toString(image) +
+                ", mobile='" + mobile + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", state='" + state + '\'' +
+                ", city='" + city + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
     }
 }

@@ -14,4 +14,6 @@ public class DateConverter {
     public static long fromDate(Date date) {
         return date.getTime();
     }
+
+
 }

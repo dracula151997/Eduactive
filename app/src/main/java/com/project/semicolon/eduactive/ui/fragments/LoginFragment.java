@@ -81,7 +81,7 @@ public class LoginFragment extends Fragment implements ButtonLoading.OnButtonLoa
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            AppHelper.navigate(getActivity(), R.id.nav_host_fragment, R.id.newsFragment);
+                            AppHelper.navigate(getActivity(), R.id.nav_host_fragment, R.id.homeFragment);
                             loginBinding.btnSignIn.setProgress(false);
 
                         }

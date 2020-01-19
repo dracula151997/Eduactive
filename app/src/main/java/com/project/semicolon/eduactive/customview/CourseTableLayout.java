@@ -251,6 +251,7 @@ public class CourseTableLayout extends LinearLayout {
         return colorArray;
     }
 
+
     private void setTableCell(int row, int col, int color, CourseInfo course) {
         Log.e(getClass().getSimpleName(), "setTableCell");
         LinearLayout tableRow = (LinearLayout) courseContainer.getChildAt(row);

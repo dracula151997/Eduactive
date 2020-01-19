@@ -6,9 +6,11 @@ import androidx.room.Update;
 
 import java.util.List;
 
+import static androidx.room.OnConflictStrategy.REPLACE;
+
 public interface BaseDao<T> {
 
-    @Insert
+    @Insert(onConflict = REPLACE)
     long insert(T entity);
 
     @Delete
@@ -17,7 +19,7 @@ public interface BaseDao<T> {
     @Update
     int update(T entity);
 
-    @Insert
+    @Insert(onConflict = REPLACE)
     long[] insert(List<T> tList);
 
 

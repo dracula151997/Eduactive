@@ -15,4 +15,12 @@ public class BindingAdapterHelper {
                 .load(resId)
                 .into(imageView);
     }
+
+    @BindingAdapter("loadImage")
+    public static void load(ImageView imageView, String url) {
+        Context context = imageView.getContext();
+        Glide.with(context)
+                .load(url)
+                .into(imageView);
+    }
 }

@@ -5,6 +5,8 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import com.project.semicolon.eduactive.adapters.ListItemViewModel;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -16,7 +18,7 @@ foreignKeys = @ForeignKey(entity = EmployeesEntity.class,
         indices = {@Index("employeeId")}
  */
 @Entity(tableName = "articles")
-public class NewsEntity {
+public class NewsEntity extends ListItemViewModel {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "article_pk")
     public int id;
@@ -33,16 +35,54 @@ public class NewsEntity {
     @Ignore
     @ColumnInfo(name = "views_counter")
     private String viewsCounter;
+    @ColumnInfo(name = "type")
+    private byte type;
+    @ColumnInfo(name = "from")
+    private long eventData;
+    @ColumnInfo(name = "allowed_number")
+    private int allowedNumber;
+    @ColumnInfo(name = "free")
+    private boolean isFree;
+    @ColumnInfo(name = "price")
+    private String price;
 
     @Ignore
     public NewsEntity() {
     }
 
 
-    public NewsEntity(String title, String description, int image) {
+    public NewsEntity(String title, String description, int image, byte type) {
         this.title = title;
         this.description = description;
         this.image = image;
+        this.type = type;
+        createdAt = new Date(System.currentTimeMillis());
+    }
+
+    @Ignore
+    public NewsEntity(String title, String description, int image, byte type, long eventData, int allowedNumber, boolean isFree) {
+        this.title = title;
+        this.description = description;
+        this.image = image;
+        this.type = type;
+        this.eventData = eventData;
+        this.allowedNumber = allowedNumber;
+        this.isFree = isFree;
+        createdAt = new Date(System.currentTimeMillis());
+    }
+
+    public NewsEntity(Date createdAt, String title, String description,
+                      int image, String viewsCounter, byte type, long eventData, int allowedNumber, String price) {
+        this.createdAt = createdAt;
+        this.title = title;
+        this.description = description;
+        this.image = image;
+        this.viewsCounter = viewsCounter;
+        this.type = type;
+        this.eventData = eventData;
+        this.allowedNumber = allowedNumber;
+        this.price = price;
+        createdAt = new Date(System.currentTimeMillis());
     }
 
     public int getId() {
@@ -101,6 +141,69 @@ public class NewsEntity {
         this.viewsCounter = viewsCounter;
     }
 
+    public byte getType() {
+        return type;
+    }
+
+    public void setType(byte type) {
+        this.type = type;
+    }
+
+    public boolean isFree() {
+        return isFree;
+    }
+
+    public void setFree(boolean free) {
+        isFree = free;
+    }
+
+    public int getAllowedNumber() {
+        return allowedNumber;
+    }
+
+    public void setAllowedNumber(int allowedNumber) {
+        this.allowedNumber = allowedNumber;
+    }
+
+    public long getEventData() {
+        return eventData;
+    }
+
+    public void setEventData(long eventData) {
+        this.eventData = eventData;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String convertDateToTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd hh:mm a", Locale.ENGLISH);
+        return dateFormat.format(createdAt);
+    }
+
+    public String type() {
+        String stringType = "";
+        switch (type) {
+            case (byte) 0:
+                stringType = "News";
+                break;
+            case (byte) 1:
+                stringType = "Event";
+                break;
+            case (byte) 2:
+                stringType = "Training";
+                break;
+
+        }
+
+        return stringType;
+    }
+
     @Override
     public String toString() {
         return "NewsEntity{" +
@@ -109,13 +212,11 @@ public class NewsEntity {
                 ", createdAt=" + createdAt +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", image='" + image + '\'' +
+                ", image=" + image +
                 ", viewsCounter='" + viewsCounter + '\'' +
+                ", type=" + type +
+                ", eventData=" + eventData +
+                ", allowedNumber=" + allowedNumber +
                 '}';
-    }
-
-    public String convertDateToTime() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd hh:mm a", Locale.ENGLISH);
-        return dateFormat.format(createdAt);
     }
 }

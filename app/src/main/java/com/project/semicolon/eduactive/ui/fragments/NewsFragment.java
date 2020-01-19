@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
@@ -15,9 +14,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.semicolon.eduactive.R;
-import com.project.semicolon.eduactive.adapters.NewsAdapter;
+import com.project.semicolon.eduactive.adapters.GenericRecyclerAdapter;
 import com.project.semicolon.eduactive.database.DatabaseClient;
 import com.project.semicolon.eduactive.database.entities.NewsEntity;
+import com.project.semicolon.eduactive.listeners.OnListItemClickListener;
 
 import java.util.List;
 
@@ -25,9 +25,9 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NewsFragment extends Fragment {
+public class NewsFragment extends Fragment implements OnListItemClickListener {
     private static final String TAG = "NewsFragment";
-    private NewsAdapter adapter;
+    private GenericRecyclerAdapter<NewsEntity> adapter;
     private DatabaseClient db;
 
     public NewsFragment() {
@@ -47,13 +47,11 @@ public class NewsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_news, container, false);
         RecyclerView recycler = view.findViewById(R.id.news_recycler);
 
-        adapter = new NewsAdapter();
+        adapter = new GenericRecyclerAdapter<>(R.layout.list_item_articles);
+        adapter.setOnListItemClickListener(this);
         recycler.setAdapter(adapter);
         recycler.setLayoutManager(new LinearLayoutManager(getContext()));
-
         fetchArticlesFromDatabase();
-
-
         return view;
     }
 
@@ -61,14 +59,13 @@ public class NewsFragment extends Fragment {
         db.getNewsDao().getAllArticles().observe(this, new Observer<List<NewsEntity>>() {
             @Override
             public void onChanged(List<NewsEntity> newsEntities) {
-                adapter.setNewsList(newsEntities);
-                Log.d(TAG, "onChanged: news: " + newsEntities.size());
+                adapter.setItems(newsEntities);
             }
         });
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onItemClicked(View view, int position) {
+        Log.d(TAG, "onItemClicked: " + position);
     }
 }

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.nguyencse:urlembeddedview:1.0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/34edb792986581164d269aa6fa5a8321/jetified-urlembeddedview-1.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/34edb792986581164d269aa6fa5a8321/jetified-urlembeddedview-1.0.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nguyencse/urlembeddedview/1.0.2/474a7296668af13e4a73f2a3e900a1c918223c89/urlembeddedview-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

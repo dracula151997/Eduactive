@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "c06d0e549d2d769ca0e301cb238b32f0",
+    "identityHash": "6c0f5afbecd2fdb1fc741364fbc75111",
     "entities": [
       {
         "tableName": "courses",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`course_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `crs_name` TEXT, `crs_code` TEXT, `crs_hours` INTEGER NOT NULL, `crs_content` TEXT, `crs_group_link` TEXT, `crs_references` TEXT, `instructorId` INTEGER NOT NULL, `departmentId` INTEGER NOT NULL, FOREIGN KEY(`instructorId`) REFERENCES `instructors`(`inst_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT , FOREIGN KEY(`departmentId`) REFERENCES `department`(`dep_pk`) ON UPDATE RESTRICT ON DELETE RESTRICT )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`course_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `crs_name` TEXT, `crs_code` TEXT, `crs_hours` INTEGER NOT NULL, `crs_content` TEXT, `crs_group_link` TEXT, `crs_references` TEXT, `max_std_no` INTEGER NOT NULL, `instructorId` INTEGER NOT NULL, `departmentId` INTEGER NOT NULL, FOREIGN KEY(`instructorId`) REFERENCES `instructors`(`inst_pk`) ON UPDATE CASCADE ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "cid",
@@ -51,6 +51,12 @@
             "notNull": false
           },
           {
+            "fieldPath": "maxStudentNumber",
+            "columnName": "max_std_no",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
             "fieldPath": "instructorId",
             "columnName": "instructorId",
             "affinity": "INTEGER",
@@ -77,37 +83,18 @@
               "instructorId"
             ],
             "createSql": "CREATE  INDEX `index_courses_instructorId` ON `${TABLE_NAME}` (`instructorId`)"
-          },
-          {
-            "name": "index_courses_departmentId",
-            "unique": false,
-            "columnNames": [
-              "departmentId"
-            ],
-            "createSql": "CREATE  INDEX `index_courses_departmentId` ON `${TABLE_NAME}` (`departmentId`)"
           }
         ],
         "foreignKeys": [
           {
             "table": "instructors",
-            "onDelete": "RESTRICT",
-            "onUpdate": "RESTRICT",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
             "columns": [
               "instructorId"
             ],
             "referencedColumns": [
               "inst_pk"
-            ]
-          },
-          {
-            "table": "department",
-            "onDelete": "RESTRICT",
-            "onUpdate": "RESTRICT",
-            "columns": [
-              "departmentId"
-            ],
-            "referencedColumns": [
-              "dep_pk"
             ]
           }
         ]
@@ -173,7 +160,7 @@
       },
       {
         "tableName": "employees",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`emp_pk` INTEGER NOT NULL, `emp_name` TEXT, `emp_birth_date` INTEGER, `emp_state` TEXT, `emp_city` TEXT, `emp_address` TEXT, `salary` TEXT, `emp_email` TEXT, `emp_image` BLOB, `emp_tel` TEXT, `emp_mob` TEXT, `departmentId` INTEGER NOT NULL, PRIMARY KEY(`emp_pk`), FOREIGN KEY(`departmentId`) REFERENCES `department`(`dep_pk`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`emp_pk` INTEGER NOT NULL, `emp_name` TEXT, `emp_state` TEXT, `emp_city` TEXT, `emp_address` TEXT, `salary` TEXT, `emp_email` TEXT, `emp_image` BLOB, `emp_tel` TEXT, `emp_mob` TEXT, `departmentId` INTEGER NOT NULL, PRIMARY KEY(`emp_pk`), FOREIGN KEY(`departmentId`) REFERENCES `department`(`dep_pk`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
         "fields": [
           {
             "fieldPath": "eid",
@@ -185,12 +172,6 @@
             "fieldPath": "employeeName",
             "columnName": "emp_name",
             "affinity": "TEXT",
-            "notNull": false
-          },
-          {
-            "fieldPath": "birthdate",
-            "columnName": "emp_birth_date",
-            "affinity": "INTEGER",
             "notNull": false
           },
           {
@@ -348,7 +329,7 @@
       },
       {
         "tableName": "instructors",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`inst_pk` INTEGER NOT NULL, `inst_first_name` TEXT, `inst_last_name` TEXT, `inst_code` TEXT, `inst_job_title` TEXT, `inst_image` BLOB, `inst_mobile` TEXT, `inst_telephone` TEXT, `inst_user_name` TEXT, `inst_password` TEXT, `inst_state` TEXT, `inst_city` TEXT, `inst_address` TEXT, `inst_email` TEXT, `created_at` INTEGER, PRIMARY KEY(`inst_pk`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`inst_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `inst_first_name` TEXT, `inst_last_name` TEXT, `inst_code` TEXT, `inst_job_title` TEXT, `inst_image` BLOB, `inst_mobile` TEXT, `inst_telephone` TEXT, `inst_user_name` TEXT, `inst_password` TEXT, `inst_state` TEXT, `inst_city` TEXT, `inst_address` TEXT, `inst_email` TEXT, `created_at` INTEGER)",
         "fields": [
           {
             "fieldPath": "id",
@@ -445,7 +426,7 @@
           "columnNames": [
             "inst_pk"
           ],
-          "autoGenerate": false
+          "autoGenerate": true
         },
         "indices": [],
         "foreignKeys": []
@@ -511,7 +492,7 @@
       },
       {
         "tableName": "articles",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`article_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`article_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created_at` INTEGER, `article_title` TEXT, `article_desc` TEXT, `article_image` INTEGER NOT NULL, `type` INTEGER NOT NULL, `from` INTEGER NOT NULL, `allowed_number` INTEGER NOT NULL, `free` INTEGER NOT NULL, `price` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -542,6 +523,36 @@
             "columnName": "article_image",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventData",
+            "columnName": "from",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "allowedNumber",
+            "columnName": "allowed_number",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFree",
+            "columnName": "free",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -613,8 +624,143 @@
         ]
       },
       {
+        "tableName": "student_courses",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`stdId` INTEGER NOT NULL, `crsId` INTEGER NOT NULL, PRIMARY KEY(`stdId`, `crsId`), FOREIGN KEY(`stdId`) REFERENCES `students`(`std_pk`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`crsId`) REFERENCES `courses`(`course_pk`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "stdId",
+            "columnName": "stdId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "crsId",
+            "columnName": "crsId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "stdId",
+            "crsId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_student_courses_stdId",
+            "unique": false,
+            "columnNames": [
+              "stdId"
+            ],
+            "createSql": "CREATE  INDEX `index_student_courses_stdId` ON `${TABLE_NAME}` (`stdId`)"
+          },
+          {
+            "name": "index_student_courses_crsId",
+            "unique": false,
+            "columnNames": [
+              "crsId"
+            ],
+            "createSql": "CREATE  INDEX `index_student_courses_crsId` ON `${TABLE_NAME}` (`crsId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "students",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "stdId"
+            ],
+            "referencedColumns": [
+              "std_pk"
+            ]
+          },
+          {
+            "table": "courses",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "crsId"
+            ],
+            "referencedColumns": [
+              "course_pk"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "events",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`event_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `event_title` TEXT, `event_desc` TEXT, `event_date` INTEGER NOT NULL, `event_place` TEXT, `intersted_number` INTEGER NOT NULL, `going_number` INTEGER NOT NULL, `event_image` TEXT, `days` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "event_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventTitle",
+            "columnName": "event_title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "eventDesc",
+            "columnName": "event_desc",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "eventDate",
+            "columnName": "event_date",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventPlace",
+            "columnName": "event_place",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "interestedNum",
+            "columnName": "intersted_number",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "goingNum",
+            "columnName": "going_number",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "event_image",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "day",
+            "columnName": "days",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "event_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
         "tableName": "students",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`std_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `std_id` TEXT, `std_name` TEXT, `std_pass` TEXT, `std_mob` TEXT, `std_city` TEXT, `std_state` TEXT, `std_email` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`std_pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `std_id` TEXT, `std_name` TEXT, `std_pass` TEXT, `std_mob` TEXT, `std_city` TEXT, `std_state` TEXT, `std_email` TEXT, `university_mail` TEXT, `mail_activates` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "uid",
@@ -663,6 +809,18 @@
             "columnName": "std_email",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "universityMail",
+            "columnName": "university_mail",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActivated",
+            "columnName": "mail_activates",
+            "affinity": "INTEGER",
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -677,7 +835,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"c06d0e549d2d769ca0e301cb238b32f0\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"6c0f5afbecd2fdb1fc741364fbc75111\")"
     ]
   }
 }

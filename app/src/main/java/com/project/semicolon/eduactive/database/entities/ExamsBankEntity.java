@@ -4,8 +4,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.project.semicolon.eduactive.adapters.ListItemViewModel;
+
 @Entity(tableName = "exams_bank")
-public class ExamsBankEntity {
+public class ExamsBankEntity extends ListItemViewModel {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "exam_pk")
     public int eid;
@@ -146,5 +148,20 @@ public class ExamsBankEntity {
         }
 
         return examType;
+    }
+
+    @Override
+    public String toString() {
+        return "ExamsBankEntity{" +
+                "eid=" + eid +
+                ", pdf='" + pdf + '\'' +
+                ", modelAnswer='" + modelAnswer + '\'' +
+                ", hasModelAnswer=" + hasModelAnswer +
+                ", year='" + year + '\'' +
+                ", instructorName='" + instructorName + '\'' +
+                ", type=" + type +
+                ", level=" + level +
+                ", courseName='" + courseName + '\'' +
+                '}';
     }
 }

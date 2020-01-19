@@ -8,17 +8,55 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55093e36-bae5-461a-becd-cbca153691a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/ExamsBankAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/ExamsBankDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/ExamsBankFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_exams_bank.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_exams_bank.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/data_arrays.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_exifinterface_exifinterface_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amitshekhar_android_debug_db_1_0_6_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amitshekhar_android_debug_db_base_1_0_6_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_evrencoskun_library_tableview_0_8_9_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_stetho_stetho_1_5_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_stetho_stetho_okhttp3_1_5_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_hotchemi_permissionsdispatcher_3_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_nguyencse_urlembeddedview_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_4_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_9_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_cli_commons_cli_1_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jsoup_jsoup_1_11_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/EventDetailsFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/GenericRecyclerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/ListItemViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/DepartmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/EmployeesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/EventDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/InstructorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/LabsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentCoursesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/EventEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentCoursesEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/listeners/OnItemClickListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/listeners/OnListItemClickListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/EventsFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/TrainingFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/PermissionHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/blue_grey_shape.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_article_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icon_event.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icon_programmer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_event_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_events.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_training.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_available_courses.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_events.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_persons_going.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_bottom_nav.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -26,7 +64,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
@@ -34,13 +75,42 @@
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/schemas/com.project.semicolon.eduactive.database.DatabaseClient/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/com.project.semicolon.eduactive.database.DatabaseClient/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/ExamsBankAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/News.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/NewsAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/StudyTimeTableAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/StudyTimeTableModel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/CourseTableLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/CourseTableLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DateConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/BaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/CoursesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/CoursesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/CoursesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/CoursesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/DepartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/DepartmentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/EmployeesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/EmployeesEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/ExamsBankEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/ExamsBankEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/InstructorsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/InstructorsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/NewsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/NewsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/activity/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/activity/HomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/StudyTimeTableFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/StudyTimeTableFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/ExamsBankFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/ExamsBankFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/LoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/LoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/NewsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/NewsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/AppHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/AppHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/BindingAdapterHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/BindingAdapterHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_news.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_study_time_table.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_exams_bank.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_exams_bank.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/news_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_articles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/study_time_table_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_bottom_navigation_basic.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/main_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/main_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <list id="8478c230-b388-4d0b-a234-216871cbbd74" name="Fix Foreign key bugs in Room database." comment="Fix Foreign key bugs in Room database." />
@@ -54,7 +124,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="VSVKOJ456DVKT4H6" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -73,58 +142,61 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/ExamsBankFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/EventsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-              <folding>
-                <element signature="e#1486#1665#0" expanded="true" />
-                <element signature="e#1664#1665#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="39" column="110" selection-start-line="39" selection-start-column="110" selection-end-line="39" selection-end-column="110" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="android-manifest" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_events.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_events.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/EventEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1870">
+              <caret line="163" column="5" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/ExamsBankDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$USER_HOME$/Desktop/project screens/events fragment screen.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/ExamsBankAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_exams_bank.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_articles.xml">
           <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -134,9 +206,10 @@
       <list>
         <option value="navigationResourceFile" />
         <option value="valueResourceFile" />
-        <option value="Interface" />
+        <option value="resourceFile" />
         <option value="layoutResourceFile_vertical" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -151,57 +224,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/DepartmentEntity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/CoursesDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/InstructorDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/BaseDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentCoursesDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/ExamsBankEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/OnListItemClickListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/GenericRecyclerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/ExamsBankAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DateConverter.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_instructor_lecture_with_sceen_projection_tool.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_room_black_24dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_access_time_black_24dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/ViewAnimation.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/StudyTimeTableModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/AppExactors.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentEntity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentCoursesEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/ListItemViewModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/NewsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_available_courses.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_available_courses.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/AvailableCourses.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/table_view_cell_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/AppHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/LoginFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/CoursesEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/CoursesDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/EmployeesEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/InstructorsEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentCourses.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/LabsDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_articles.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_news.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/NewsAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/NewsFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/NewsDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/BindingAdapterHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/news_list_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/NewsEntity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/study_time_table_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/StudyTimeTableAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/customview/StudyTimeTableView.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/model/StudentCourse.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_study_time_table.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/model/CourseInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_study_time_table.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentCourse.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/CoursesEntity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/CourseBlock.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/CourseTableLayout.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/StudyTimeTableFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/navigation/main_graph.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_bottom_nav.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/activity/HomeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/data_arrays.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/ExamsBankEntity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_exams_bank.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/ExamsBankFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/BaseDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/ExamsBankAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/navigation/main_graph.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/PermissionHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/listeners/OnListItemClickListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_exams_bank.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/ExamsBankDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/ExamsBankFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/NewsEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/ProgressButton.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/blue_grey_shape.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_persons_going.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_event_details.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/EventDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/BindingAdapterHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_events.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/EventsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_events.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/EventEntity.java" />
       </list>
     </option>
   </component>
@@ -219,21 +292,23 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ScreenshotViewer.SavePath" value="$USER_HOME$/Desktop/project screens" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/graduation_project.db" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/project screens" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -244,6 +319,7 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v21" />
     </key>
@@ -405,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577738637942</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ExamsBank UI &amp; database is finished.">
+      <created>1578093307762</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578093307762</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -418,36 +501,37 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="675" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.32829046" />
-      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3242424" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" weight="0.32980332" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.9415094" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.9433962" />
-      <window_info anchor="bottom" id="TODO" order="2" weight="0.32830188" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.70377356" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5011287" side_tool="true" weight="0.3754717" />
-      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49887133" weight="0.3754717" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" weight="0.32830188" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.5735849" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.5962264" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.32958803" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.9407783" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49924356" weight="0.9408784" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.57022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5962264" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.70377356" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50075644" side_tool="true" weight="0.9430486" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32830188" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49887133" weight="0.7627119" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" weight="0.32830188" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.6549414" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32830188" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Gradle" order="1" weight="0.32980332" />
+      <window_info anchor="right" id="Gradle" order="1" weight="0.32930514" />
       <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Preview" order="3" weight="0.34795764" />
+      <window_info anchor="right" id="Preview" order="3" weight="0.21515152" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="SQLite Explorer" order="5" sideWeight="0.49903476" weight="0.32980332" />
-      <window_info anchor="right" id="Codota" order="6" weight="0.3290469" />
+      <window_info anchor="right" id="Codota" order="6" weight="0.3287879" />
       <window_info anchor="right" id="Device File Explorer" order="7" sideWeight="0.50096524" side_tool="true" weight="0.39183056" />
     </layout>
   </component>
@@ -512,456 +596,470 @@
     <MESSAGE value="StudentLogin finished &amp; made some CRUD operation on table." />
     <MESSAGE value="Study Time table finished." />
     <MESSAGE value="ExamsBank UI &amp; database is finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="ExamsBank UI &amp; database is finished." />
+    <MESSAGE value="fixed some bugs, polish ui, and create events fragment" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some bugs, polish ui, and create events fragment" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_home.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentCoursesEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53" />
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.navigation/navigation-ui/2.1.0/7efb6a20e39a1af8e697b786a33dcc828cefba69/navigation-ui-2.1.0-sources.jar!/androidx/navigation/ui/NavigationUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-970">
-          <caret line="437" column="23" selection-start-line="437" selection-start-column="23" selection-end-line="437" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/oppo-cph1725-VSVKOJ456DVKT4H6/data/data/com.project.semicolon.eduactive/databases/graduation_project.db" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/NewsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/com/project/semicolon/eduactive/database/daos/NewsDao_Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/NewsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="236">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/com/project/semicolon/eduactive/DataBinderMapperImpl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/DepartmentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        <state relative-caret-position="180">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/NewsEntity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="119" column="74" selection-start-line="119" selection-start-column="74" selection-end-line="119" selection-end-column="74" />
+        <state relative-caret-position="294">
+          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseManager.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-477">
+          <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
           <folding>
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1223#1224#0" expanded="true" />
-            <element signature="e#1256#1257#0" expanded="true" />
-            <element signature="e#1305#1306#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1463#1464#0" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
-            <element signature="e#1537#1538#0" expanded="true" />
-            <element signature="e#1565#1566#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#1641#1642#0" expanded="true" />
-            <element signature="e#1679#1680#0" expanded="true" />
-            <element signature="e#1713#1714#0" expanded="true" />
-            <element signature="e#1767#1768#0" expanded="true" />
-            <element signature="e#1813#1814#0" expanded="true" />
-            <element signature="e#1842#1843#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
-            <element signature="e#1909#1910#0" expanded="true" />
-            <element signature="e#1943#1944#0" expanded="true" />
-            <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="e#2017#2018#0" expanded="true" />
-            <element signature="e#2073#2074#0" expanded="true" />
-            <element signature="e#2121#2122#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1734#1735#0" expanded="true" />
+            <element signature="e#1769#1770#0" expanded="true" />
+            <element signature="e#1799#1800#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#1867#1868#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#1997#1998#0" expanded="true" />
+            <element signature="e#2031#2032#0" expanded="true" />
+            <element signature="e#2085#2086#0" expanded="true" />
+            <element signature="e#2131#2132#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="e#2197#2198#0" expanded="true" />
+            <element signature="e#2245#2246#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="e#2317#2318#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
+            <element signature="e#2387#2388#0" expanded="true" />
+            <element signature="e#2421#2422#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2489#2490#0" expanded="true" />
+            <element signature="e#2539#2540#0" expanded="true" />
+            <element signature="e#2581#2582#0" expanded="true" />
+            <element signature="e#2614#2615#0" expanded="true" />
+            <element signature="e#2643#2644#0" expanded="true" />
+            <element signature="e#2687#2688#0" expanded="true" />
+            <element signature="e#2723#2724#0" expanded="true" />
+            <element signature="e#2754#2755#0" expanded="true" />
+            <element signature="e#2781#2782#0" expanded="true" />
+            <element signature="e#2821#2822#0" expanded="true" />
+            <element signature="e#2853#2854#0" expanded="true" />
+            <element signature="e#2885#2886#0" expanded="true" />
+            <element signature="e#2913#2914#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#2989#2990#0" expanded="true" />
+            <element signature="e#3023#3024#0" expanded="true" />
+            <element signature="e#3053#3054#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
+            <element signature="e#3137#3138#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="e#3239#3240#0" expanded="true" />
+            <element signature="e#3273#3274#0" expanded="true" />
+            <element signature="e#3321#3322#0" expanded="true" />
+            <element signature="e#3363#3364#0" expanded="true" />
+            <element signature="e#3397#3398#0" expanded="true" />
+            <element signature="e#3429#3430#0" expanded="true" />
+            <element signature="e#3489#3490#0" expanded="true" />
+            <element signature="e#3541#3542#0" expanded="true" />
+            <element signature="e#3582#3583#0" expanded="true" />
+            <element signature="e#3619#3620#0" expanded="true" />
+            <element signature="e#3655#3656#0" expanded="true" />
+            <element signature="e#3689#3690#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+            <element signature="e#3779#3780#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/NewsFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentCourses.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/LabsEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/BindingAdapterHelper.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/LabsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/StudyTimeTableAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setModelList#0;class#StudyTimeTableAdapter#0" />
-            <element signature="method#toggleExpandLayout#0;class#StudyTimeTableAdapter#0" />
-            <element signature="e#2340#2341#0" expanded="true" />
-            <element signature="e#2379#2380#0" expanded="true" />
-            <element signature="class#MyViewHolder#0;class#StudyTimeTableAdapter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/news_list_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/StudyTimeTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1533#1534#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/study_time_table_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="64" column="54" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-29/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="1137" selection-start-line="1137" selection-end-line="1137" />
-          <folding>
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="e#13200#13201#0" expanded="true" />
-            <element signature="e#34231#34232#0" expanded="true" />
-            <element signature="e#34282#34283#0" expanded="true" />
-            <element signature="e#43255#43256#0" expanded="true" />
-            <element signature="e#43306#43307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-29/android.jar!/android/widget/TextView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-29/android.jar!/java/lang/Object.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding>
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/customview/StudyTimeTableView.java" />
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-29/android.jar!/android/graphics/drawable/ColorDrawable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding>
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_study_time_table.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1566d938ec0604acaed1c0755340439e/TimetableUI-v1.0.0/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_time_table.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/StudentCourse.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/model/StudentCourse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/model/CourseInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="340" column="34" selection-start-line="340" selection-start-column="34" selection-end-line="340" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/CoursesEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/CourseBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/CourseTableLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-29/android.jar!/java/lang/Integer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/StudyTimeTableFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-          <folding>
-            <element signature="e#2811#2812#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/navigation/main_graph.xml">
-      <provider selected="true" editor-type-id="nav-designer" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/data_arrays.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/activity/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        <state relative-caret-position="26">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/platforms/android-29/data/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="3341" column="20" selection-start-line="3341" selection-start-column="20" selection-end-line="3341" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseHelper.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/ExamsBankEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="method#getExamType#0;class#ExamsBankEntity#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/NewsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="79" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="79" />
+        <state relative-caret-position="522">
+          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_news.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="198">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_exams_bank.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        <state relative-caret-position="198">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_training.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_bottom_nav.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/TrainingFragment.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="e#52#2062#0" />
+            <element signature="e#1599#1623#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/BaseDao.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/activity/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="924">
+          <caret line="139" column="22" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_exams_bank.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="73" column="49" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="49" />
+          <folding>
+            <element signature="e#3692#3710#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/PermissionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/AppHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/listeners/OnItemClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/listeners/OnListItemClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/ExamsBankFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+        <state relative-caret-position="504">
+          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
           <folding>
-            <element signature="e#1486#1665#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="method#onCreateView#0;class#ExamsBankFragment#0" />
+            <element signature="method#fetchExamsFromDatabase#0;class#ExamsBankFragment#0" />
+            <element signature="method#setupRecyclerView#0;class#ExamsBankFragment#0" />
+            <element signature="method#onItemClicked#0;class#ExamsBankFragment#0" />
+            <element signature="method#onRequestPermissionsResult#0;class#ExamsBankFragment#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/navigation/main_graph.xml">
+      <provider selected="true" editor-type-id="nav-designer" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/NewsEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+          <folding>
+            <element signature="e#3677#3678#0" expanded="true" />
+            <element signature="e#3727#3728#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#4147#4148#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="e#4246#4247#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4322#4323#0" expanded="true" />
+            <element signature="e#4359#4360#0" expanded="true" />
+            <element signature="e#4395#4396#0" expanded="true" />
+            <element signature="e#4429#4430#0" expanded="true" />
+            <element signature="e#4461#4462#0" expanded="true" />
+            <element signature="e#4493#4494#0" expanded="true" />
+            <element signature="e#4521#4522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/customview/ProgressButton.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/GenericRecyclerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/EventDetailsFragment.java">
       <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/adapters/ExamsBankAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/blue_grey_shape.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_exams_bank.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_persons_going.xml">
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/ExamsBankDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        <state relative-caret-position="153">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_event_details.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+          <folding>
+            <element signature="e#533#989#0" />
+            <element signature="e#899#1497#0" />
+            <element signature="e#1130#1156#0" expanded="true" />
+            <element signature="e#2317#2340#0" expanded="true" />
+            <element signature="e#2654#2673#0" expanded="true" />
+            <element signature="e#2915#2934#0" expanded="true" />
+            <element signature="e#3344#3367#0" expanded="true" />
+            <element signature="e#4188#4207#0" expanded="true" />
+            <element signature="e#4911#4934#0" expanded="true" />
+            <element signature="e#5965#6187#0" />
+            <element signature="e#6219#6238#0" expanded="true" />
+            <element signature="e#7325#7353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/neck_protect_cache/bing/01C8AAC8E56BCE92F9608321D4D81B40.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/com/project/semicolon/eduactive/DataBinderMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/utils/BindingAdapterHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/DatabaseClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#11010#11056#0" expanded="true" />
+            <element signature="e#11869#11918#0" expanded="true" />
+            <element signature="e#25605#25654#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/EventDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/daos/StudentCoursesDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/ui/fragments/EventsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="110" selection-start-line="39" selection-start-column="110" selection-end-line="39" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_events.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_events.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/project/semicolon/eduactive/database/entities/EventEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="163" column="5" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_articles.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/project screens/events fragment screen.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">

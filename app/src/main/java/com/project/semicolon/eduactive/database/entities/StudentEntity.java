@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey;
 import java.util.Arrays;
 import java.util.Date;
 
+
 @Entity(tableName = "students")
 public class StudentEntity {
     @PrimaryKey(autoGenerate = true)
@@ -39,6 +40,10 @@ public class StudentEntity {
     @ColumnInfo(name = "std_birth_date")
     @Ignore
     private Date birthdate;
+    @ColumnInfo(name = "university_mail")
+    private String universityMail;
+    @ColumnInfo(name = "mail_activates")
+    private boolean isActivated;
 
     @Ignore
     public StudentEntity() {
@@ -149,6 +154,22 @@ public class StudentEntity {
         return birthdate;
     }
 
+    public String getUniversityMail() {
+        return universityMail;
+    }
+
+    public void setUniversityMail(String universityMail) {
+        this.universityMail = universityMail;
+    }
+
+    public boolean isActivated() {
+        return isActivated;
+    }
+
+    public void setActivated(boolean activated) {
+        isActivated = activated;
+    }
+
     @Override
     public String toString() {
         return "StudentEntity{" +
@@ -164,6 +185,7 @@ public class StudentEntity {
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", birthdate=" + birthdate +
+                ", universityMail='" + universityMail + '\'' +
                 '}';
     }
 }

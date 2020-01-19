@@ -2,9 +2,13 @@ package com.project.semicolon.eduactive.utils;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.DownloadManager;
 import android.content.Context;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,6 +24,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class AppHelper {
+    private static final String TAG = "AppHelper";
 
 
     public static void setSystemBarColor(Activity act) {
@@ -112,9 +117,31 @@ public class AppHelper {
                 .navigate(fragmentId);
     }
 
-    public static void navigate(Activity activity, int viewId, int fragmentId){
+    public static void navigate(Activity activity, int viewId, int fragmentId) {
         Navigation.findNavController(activity, viewId)
                 .navigate(fragmentId);
+    }
+
+    public static void downloadFileFromHttp(Context context, String url) {
+        String[] split = url.split("/");
+        String fileName = split[7];
+        Log.d(TAG, "downloadFileFromHttp: file name: " + fileName);
+
+
+        DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        Uri uri = Uri.parse(url);
+
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setTitle(fileName);
+        request.setDescription("Downloading...");
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setVisibleInDownloadsUi(true);
+        String directoryDownloads = Environment.DIRECTORY_DOWNLOADS;
+        Log.d(TAG, "downloadFileFromHttp: download directory: " + directoryDownloads);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
+
+        downloadManager.enqueue(request);
+
     }
 
 

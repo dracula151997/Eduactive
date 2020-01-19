@@ -6,9 +6,9 @@
     app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/newsFragment"
+        android:id="@+id/homeFragment"
         android:name="com.project.semicolon.eduactive.ui.fragments.NewsFragment"
-        android:label="News"
+        android:label="Home"
         tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/studyTimeTableFragment"
@@ -23,6 +23,16 @@
     <fragment
         android:id="@+id/examsBankFragment"
         android:name="com.project.semicolon.eduactive.ui.fragments.ExamsBankFragment"
-        android:label="fragment_exams_bank"
+        android:label="Exams Bank"
         tools:layout="@layout/fragment_exams_bank" />
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.project.semicolon.eduactive.ui.fragments.EventsFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.project.semicolon.eduactive.ui.fragments.TrainingFragment"
+        android:label="Training"
+        tools:layout="@layout/fragment_training" />
 </navigation>

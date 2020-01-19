@@ -18,62 +18,64 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.project.semicolon.eduactive.R;
 import com.project.semicolon.eduactive.utils.AppHelper;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class HomeActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener,
+        NavController.OnDestinationChangedListener {
     private AppBarConfiguration appBarConfiguration;
     private NavController controller;
     private DrawerLayout drawerLayout;
+    private BottomNavigationView bottomNavigationView;
+    private Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        final Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
 
         controller = Navigation.findNavController(this, R.id.nav_host_fragment);
         appBarConfiguration = new AppBarConfiguration.Builder(controller.getGraph())
                 .setDrawerLayout(drawerLayout)
                 .build();
-        controller.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                switch (destination.getId()) {
-                    case R.id.loginFragment:
-                        hideToolbar();
-                        break;
-                    default:
-                        showToolbar();
-                }
-            }
-        });
+        controller.addOnDestinationChangedListener(this);
 
+        NavigationUI.setupWithNavController(bottomNavigationView, controller);
         NavigationUI.setupWithNavController(navigationView, controller);
+        AppHelper.setSystemBarLight(this);
+        AppHelper.setSystemBarColor(this, R.color.grey_10);
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        AppHelper.setSystemBarLight(this);
-        AppHelper.setSystemBarColor(this, R.color.grey_10);
+    }
 
+    private void hideBottomNav(boolean hide) {
+        if (hide) bottomNavigationView.setVisibility(View.GONE);
+        else bottomNavigationView.setVisibility(View.VISIBLE);
     }
 
     private void showToolbar() {
         findViewById(R.id.toolbar).setVisibility(View.VISIBLE);
     }
 
-    private void hideToolbar() {
-        findViewById(R.id.toolbar).setVisibility(View.GONE);
+    private void hideToolbar(boolean hide) {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        if (hide) toolbar.setVisibility(View.GONE);
+        else toolbar.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -103,6 +105,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.menu_exam_bank:
                 controller.navigate(R.id.examsBankFragment);
                 return true;
+            case R.id.menu_home:
+                controller.navigate(R.id.homeFragment);
+                return true;
 
 
         }
@@ -115,5 +120,28 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             drawerLayout.closeDrawer(GravityCompat.START);
         else
             super.onBackPressed();
+    }
+
+    @Override
+    public void onDestinationChanged(@NonNull NavController controller, @NonNull
+            NavDestination destination, @Nullable Bundle arguments) {
+        CharSequence title = destination.getLabel();
+        toolbar.setTitle(title);
+        switch (destination.getId()) {
+            case R.id.loginFragment:
+                hideToolbar(true);
+                hideBottomNav(true);
+                break;
+            case R.id.homeFragment:
+            case R.id.trainingFragment:
+            case R.id.eventsFragment:
+                hideBottomNav(false);
+                hideToolbar(false);
+                break;
+            default:
+                hideToolbar(false);
+                hideBottomNav(true);
+                break;
+        }
     }
 }

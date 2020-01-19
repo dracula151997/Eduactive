@@ -41,6 +41,9 @@
     <dimen name="spacing_xmlarge">40dp</dimen>
     <dimen name="spacing_xxlarge">50dp</dimen>
     <dimen name="spacing_xxxlarge">55dp</dimen>
+    <dimen name="default_card_elev">3dp</dimen>
+    <dimen name="default_card_radius">3dp</dimen>
+    <dimen name="dimen_30dp">30dp</dimen>
 
 
 </resources>

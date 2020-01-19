@@ -15,7 +15,7 @@ public interface StudentDao {
     long insertStudent(StudentEntity student);
 
     @Insert
-    List<Long> insetStudents(List<StudentEntity> students);
+    void insertStudentList(List<StudentEntity> students);
 
     @Query("DELETE FROM students WHERE std_id=:studentId")
     void deleteStudentById(String studentId);
@@ -26,6 +26,8 @@ public interface StudentDao {
     @Query("SELECT * FROM students WHERE std_id=:studentId AND std_pass=:studentPass")
     StudentEntity studentLogin(String studentId, String studentPass);
 
+    @Query("UPDATE students SET university_mail=:universityMail AND mail_activates=:activate WHERE std_id=:userId")
+    int updateUniversityMail(String universityMail, boolean activate, int userId);
 
 
 }
